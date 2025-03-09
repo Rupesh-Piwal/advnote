@@ -15,6 +15,11 @@ const NoteSchema = new Schema(
       enum: ["personal", "work", "ideas", "projects"],
       default: [],
     },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
   },
   { timestamps: true }
 );
